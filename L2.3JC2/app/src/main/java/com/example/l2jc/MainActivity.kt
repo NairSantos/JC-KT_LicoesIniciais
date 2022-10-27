@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+<<<<<<< Updated upstream
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.foundation.layout.Column
@@ -17,6 +18,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+=======
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.ui.res.painterResource
+>>>>>>> Stashed changes
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -24,8 +31,11 @@ import androidx.compose.ui.unit.dp
 
 
 
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +50,11 @@ class MainActivity : ComponentActivity() {
 
     @Composable
     fun MessageCard(msg: Message) {
+<<<<<<< Updated upstream
         Row {
+=======
+        Row (modifier = Modifier.padding(all = 8.dp)) {
+>>>>>>> Stashed changes
             Image(
                 painter = painterResource(R.drawable.profile_picture),
                 contentDescription = "Contact profile picture",
@@ -52,6 +66,7 @@ class MainActivity : ComponentActivity() {
             )
             // Add a horizontal space between the image and the column
             Spacer(modifier = Modifier.width(8.dp))
+<<<<<<< Updated upstream
         Column {//permite organizar os elementos verticalmente
         Text(text = msg.author)
         Text(text = msg.body)
@@ -64,11 +79,23 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun PreviewMessageCard() {
         MessageCard(msg = Message("Lexi", "Hey, take a look at Jetpack Compose, it's great!"))
+=======
+
+            Column {//permite organizar os elementos verticalmente
+                Text(text = msg.author)
+                // Add a vertical space between the author and message texts
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(text = msg.body)
+            }
+    }
+  }
+>>>>>>> Stashed changes
     }
 
 
 
 
+<<<<<<< Updated upstream
 //....
 
 
@@ -76,5 +103,7 @@ class MainActivity : ComponentActivity() {
 
 
 
+=======
+>>>>>>> Stashed changes
 
 
